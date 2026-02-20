@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreenHorizon | Coming Soon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="background-overlay"></div>
+      
+      <main class="content">
+        <header class="logo">
+          <h1>Green<span>Horizon</span></h1>
+        </header>
+
+        <section class="hero">
+          <h2 class="animate-up">Something <span class="accent">Iconic</span> is Growing</h2>
+          <p class="animate-up delay-1">We're building the future of sustainable digital experiences. Join the waitlist to be the first to know when we sprout.</p>
+        </section>
+
+        <section class="countdown animate-up delay-2">
+          <div class="time-block">
+            <span id="days">00</span>
+            <label>Days</label>
+          </div>
+          <div class="time-block">
+            <span id="hours">00</span>
+            <label>Hours</label>
+          </div>
+          <div class="time-block">
+            <span id="minutes">00</span>
+            <label>Minutes</label>
+          </div>
+          <div class="time-block">
+            <span id="seconds">00</span>
+            <label>Seconds</label>
+          </div>
+        </section>
+
+        <section class="newsletter animate-up delay-3">
+          <form id="waitlist-form">
+            <div class="input-group">
+              <input type="email" placeholder="Enter your email address" required>
+              <button type="submit">Notify Me</button>
+            </div>
+          </form>
+          <p class="status-msg"></p>
+        </section>
+
+        <footer class="animate-up delay-4">
+          <p>&copy; 2026 GreenHorizon. All rights reserved.</p>
+          <div class="socials">
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+          </div>
+        </footer>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
