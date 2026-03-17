@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography */
+@layer base {
+  h1 {
+    @apply font-serif text-5xl md:text-6xl font-bold;
+  }
+
+  h2 {
+    @apply font-serif text-4xl md:text-5xl font-semibold;
+  }
+
+  h3 {
+    @apply font-serif text-2xl md:text-3xl font-semibold;
+  }
+
+  h4 {
+    @apply font-sans text-xl md:text-2xl font-medium;
+  }
+
+  body {
+    @apply font-sans text-veritraa-charcoal;
+  }
+
+  a {
+    @apply text-veritraa-green hover:text-veritraa-gold transition-colors;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-veritraa-gold text-white font-semibold rounded-lg hover:bg-opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-veritraa-gold text-veritraa-gold font-semibold rounded-lg hover:bg-veritraa-gold hover:text-white transition-all duration-300;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-veritraa-medium-gray text-veritraa-charcoal font-semibold rounded-lg hover:bg-veritraa-light-gray transition-all duration-300;
+  }
+
+  .badge-success {
+    @apply inline-block px-3 py-1 bg-veritraa-success text-white text-sm rounded-full;
+  }
+
+  .badge-warning {
+    @apply inline-block px-3 py-1 bg-veritraa-warning text-white text-sm rounded-full;
+  }
+
+  .badge-error {
+    @apply inline-block px-3 py-1 bg-veritraa-error text-white text-sm rounded-full;
+  }
+
+  .product-card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow overflow-hidden;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .glass-panel {
+    @apply bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20 rounded-lg;
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-slide-in-left {
+  animation: slideInFromLeft 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d5016;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c9a962;
+}
