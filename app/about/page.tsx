@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CheckCircle2, Users, Leaf, Target, Heart } from 'lucide-react';
+import { CheckCircle2, Target, Heart } from 'lucide-react';
 
 export default function AboutPage() {
   return (
