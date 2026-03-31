@@ -1,4 +1,4 @@
-// File: C:\Users\acer\Documents\GitHub\Veritraa\app\layout.tsx
+// File: C:\Users\Yash Tripathi\Documents\GitHub\Veritraa\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

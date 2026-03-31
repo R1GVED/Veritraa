@@ -1,46 +1,49 @@
 import type { Metadata } from 'next';
+import { Manrope, Noto_Serif } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Navbar from '@/components/site/Navbar';
+import SiteFooter from '@/components/site/SiteFooter';
+import ClientRuntimeGuard from '@/components/site/ClientRuntimeGuard';
+
+const headlineFont = Noto_Serif({
+  subsets: ['latin'],
+  variable: '--font-headline',
+  weight: ['400', '700'],
+});
+
+const bodyFont = Manrope({
+  subsets: ['latin'],
+  variable: '--font-body',
+  weight: ['300', '400', '500', '600', '700'],
+});
 
 export const metadata: Metadata = {
-  title: 'Veritraa | Premium Spices & Dry Fruits',
-  description: 'Pure. True. Trusted. Premium Indian spices and dry fruits with lab-tested purity and regional authenticity.',
-  keywords: 'spices, masala, turmeric, coriander, indian spices, organic spices, premium spices',
-  authors: [{ name: 'Veritraa' }],
-  openGraph: {
-    type: 'website',
-    locale: 'en_IN',
-    url: 'https://veritraa.com',
-    title: 'Veritraa | Premium Spices & Dry Fruits',
-    description: 'Pure. True. Trusted. Premium Indian spices and dry fruits.',
-    images: [
-      {
-        url: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=1200&h=630&fit=crop',
-        width: 1200,
-        height: 630,
-        alt: 'Veritraa Spices',
-      },
-    ],
-  },
+  title: 'Veritraa | The Sensory Heritage',
+  description:
+    'Experience Veritraa through a refined storefront for heritage Indian masalas, exports, and store discovery.',
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/veritra.png" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        />
       </head>
-      <body className="bg-veritraa-warm-white text-veritraa-charcoal">
-        <Header />
-        <main className="min-h-screen pt-20">
-          {children}
-        </main>
-        <Footer />
+      <body
+        className={`${headlineFont.variable} ${bodyFont.variable} bg-background font-body text-on-background antialiased`}
+      >
+        <ClientRuntimeGuard />
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <SiteFooter />
       </body>
     </html>
   );
