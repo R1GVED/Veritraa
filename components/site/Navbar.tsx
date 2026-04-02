@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
@@ -14,19 +15,31 @@ export default function Navbar(_: Readonly<NavbarProps>) {
 
   return (
     <nav className="glass-nav fixed top-0 z-50 w-full border-b border-outline-variant/20 shadow-sm">
-      <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-5 py-4 md:px-8">
-        <Link href="/" className="font-headline text-2xl font-bold tracking-tight text-on-background">
-          Veritraa
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between px-5 py-2 md:px-8 md:py-2.5 gap-4">
+        <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Image 
+            src="/veritraa.png" 
+            alt="Veritraa" 
+            height={100} 
+            width={100}
+            className="h-14 w-auto"
+            priority
+          />
+          <div className="hidden sm:flex flex-col">
+            <span className="text-[9px] md:text-[10px] font-semibold text-primary/80 leading-none">PURE.</span>
+            <span className="text-[9px] md:text-[10px] font-semibold text-primary/80 leading-none">TRUE.</span>
+            <span className="text-[9px] md:text-[10px] font-semibold text-primary/80 leading-none">TRUSTED.</span>
+          </div>
         </Link>
 
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-10 md:flex">
           {navLinks.map((link) => {
             const isActive = pathname === link.href;
 
             return (
               <Link
                 key={link.label}
-                className={`border-b-2 pb-1 font-body text-[15px] tracking-tight transition-all duration-300 ease-out ${
+                className={`border-b-2 pb-1 font-body text-sm tracking-tight transition-all duration-300 ease-out ${
                   isActive
                     ? 'border-primary text-primary'
                     : 'border-transparent text-on-background opacity-80 hover:text-primary hover:opacity-100'
@@ -39,7 +52,7 @@ export default function Navbar(_: Readonly<NavbarProps>) {
           })}
         </div>
 
-        <div className="hidden items-center gap-5 md:flex">
+        <div className="hidden items-center gap-5 md:flex shrink-0">
           <button
             aria-label="Search products"
             className="cursor-pointer text-on-background transition-colors hover:text-primary"
@@ -57,8 +70,8 @@ export default function Navbar(_: Readonly<NavbarProps>) {
               2
             </span>
           </button>
-          <button className="spice-gradient rounded-full px-6 py-2.5 text-sm font-semibold text-on-primary shadow-lg shadow-primary/10 transition-transform hover:scale-105">
-            Login with Shopify
+          <button className="spice-gradient rounded-md px-5 py-2 text-xs md:text-sm font-semibold text-on-primary shadow-lg shadow-primary/10 transition-all hover:shadow-primary/20">
+            Login
           </button>
         </div>
 
@@ -69,7 +82,7 @@ export default function Navbar(_: Readonly<NavbarProps>) {
           onClick={() => setMobileMenuOpen((value) => !value)}
           type="button"
         >
-          {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileMenuOpen ? <X size={21} /> : <Menu size={21} />}
         </button>
       </div>
 
@@ -106,7 +119,7 @@ export default function Navbar(_: Readonly<NavbarProps>) {
                   2
                 </span>
               </button>
-              <button className="spice-gradient rounded-full px-5 py-2 text-sm font-medium text-on-primary">
+              <button className="spice-gradient rounded-full px-4 py-2 text-xs font-medium text-on-primary">
                 Login with Shopify
               </button>
             </div>

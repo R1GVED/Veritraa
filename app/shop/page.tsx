@@ -4,8 +4,8 @@ import { shopCategories, shopProducts } from '@/src/data/mockData';
 export default function ShopPage() {
   return (
     <div className="bg-surface pb-20 pt-24 text-on-background">
-      <header className="mx-auto max-w-screen-2xl px-8 py-16 text-center">
-        <h1 className="mb-4 font-headline text-5xl tracking-tight md:text-7xl">
+      <header className="mx-auto max-w-screen-2xl px-8 py-12 text-center md:py-14">
+        <h1 className="mb-4 font-headline text-4xl tracking-tight md:text-6xl">
           The Modern Apothecary
         </h1>
         <p className="mx-auto max-w-2xl text-lg text-on-surface-variant opacity-80">
@@ -31,7 +31,7 @@ export default function ShopPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-12 px-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <section className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-8 px-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {shopProducts.map((product) => (
           <ProductCard key={product.name} product={product} variant="shop" />
         ))}

@@ -1,3 +1,4 @@
+// Authoritative catalog and site content data used in production.
 export type NavLink = {
   label: string;
   href: string;
@@ -76,7 +77,6 @@ export const navLinks: ReadonlyArray<NavLink> = [
   { label: 'Home', href: '/' },
   { label: 'Shop', href: '/shop' },
   { label: 'Exports', href: '/exports' },
-  { label: 'Store Locator', href: '/store-locator' },
 ];
 
 export const homeCollections: ReadonlyArray<CollectionItem> = [
@@ -171,69 +171,131 @@ export const shopCategories: ReadonlyArray<string> = [
 
 export const shopProducts: ReadonlyArray<ShopProduct> = [
   {
-    name: 'Garam Masala',
-    description: 'Aromatic blend for ultimate warmth.',
-    price: 'Rs. 199',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBkS_A93ZSDNFkJob6Fza629SNGD0-SoyRfLQhaA0os_Zs7SFT4u-lWl6TxqIz19bduwRIL5iQ_RcVqHhdklj_SHPOry0qH8jDGDeViXlmDsgtq375tT7FAXrafBEfyZPZjVhlo0WFNDtfMgyNofMC1bsWVA1v4Ped06A6znOakJCI-DXLyyK_9k-VucdPMMjTUpugAINuL4yQDF0jA04P_6UwBfELNYBcbs7NDsJCUUXkHKmgJM5OwLsLiHttslUr3x7bcyYAqa9Y',
-    sizes: ['100g', '250g', '500g'],
-    tag: { icon: 'local_fire_department', label: 'High Heat' },
+    name: 'Dry Red Chilli Powder (Kashmiri Lal)',
+    description: 'Deep red color with balanced heat for rich gravies.',
+    price: 'Rs. 700',
+    image: '/masalas/6.Kashmirilal.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+    tag: { icon: 'workspace_premium', label: 'Top Seller' },
+  },
+  {
+    name: 'Dry Red Chilli Powder (Lai Tikhat)',
+    description: 'Bold and fiery chilli powder for spicy regional recipes.',
+    price: 'Rs. 600',
+    image: '/masalas/4.Tikhalal.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Dry Red Chilli Powder (Tej)',
+    description: 'Intense hot chilli profile for high-heat cooking.',
+    price: 'Rs. 500',
+    image: '/masalas/tej.jpeg',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
   },
   {
     name: 'Kanda Lasun Chutney',
-    description: 'Authentic Maharashtrian punch.',
-    price: 'Rs. 149',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCfnxyZB33ai2DD2-sqWwhtgzAunF3NvJP06V7NsbMeFjYIS_eao87XSp7E020DyLTx13jyVA84jnoTThYldU28HWsDvK59gp8ApKwEPG0PCMQ8YIUQeZUbKAsKgHOAryHstZIlGdbVw-yVUYsJWzykcol58RRpSAWDSNtXtLigc3iIzwPF0K-eW-cKHRQZV9D2np84GvgdklsMxeOgvxDE5TcAob4VreIcbI_F7RoaIrMBM5C77VEziQ9ZMMIRS792S8SZXeingcg',
-    sizes: ['100g', '250g'],
-  },
-  {
-    name: 'Malvani Fish Fry Masala',
-    description: 'Coastal zest for every catch.',
-    price: 'Rs. 169',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAYn4neV_VrBcqziJlRrlb5U3Mrsvh79WqqMvzODevxyOdtnxdZmn3uYX5QPRzOJLnuK4oEBsqy3yxZ52dZsDqi-jEoLEBMflIewdlNQKVmAWajbttVWQKNR_C3ptUdcWJjTecVIEepQZaeJjotNaLA3vbhUYpNqk31ofe5wE4EszoVhcvzsqUKSdgcIJiZ5ayZXi-AaEAhqREumM6zcLxZ-aU0NGilKh3TRr8JY_aIzS4oPlVNfH3KUdd8OTr27a4nxpE0FNTtF_g',
-    sizes: ['100g', '250g'],
-  },
-  {
-    name: 'Kala Masala',
-    description: 'Rich, dark, and smoky heritage.',
-    price: 'Rs. 199',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuDNMP3yfuuCx02mbZcHpAvYQpYMj94NkP0A1BYR8wg1BrJTJpw77Ue2TNU0U4kkGUxnpTFL2utJE1d1TT7hpuweYeU1hu75ILM3lqvJvoi_oIEJq9LJ8JGNePcHTMc3kLWHcBzPJH3FGyjL7panQ4-9yNpu1_L4kpp2JUPXfWzpmPj5EYcYzIyzXaJktBbcVtx27y41L4CduusZie-DV9tP97IYfP5rxeDPfgi9K_Gj7mkI-o70oYdHWP2ZFQLjL1qPzqvUaGwDmmI',
-    sizes: ['100g', '250g'],
+    description: 'Authentic Maharashtrian garlic-onion chutney blend.',
+    price: 'Rs. 600',
+    image: '/masalas/3.Kanda_Lasun_chutney.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
   },
   {
     name: 'Turmeric Powder',
-    description: 'High curcumin content gold.',
-    price: 'Rs. 99',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuCTVVuXiKoMOl7W7X-iKfTD969iRzfveuVhBwlLTKlgQDbBwyljhU9LqI2bsppOHxINZJJQqjzo-CrEw0SYNptgl1YrfXO6HfY9obp4SEurtsg98j3yL7KGBRJTGViEjSlOAB7XNYZScL-FfIpOu7NcL5Ps2XPLcE2no4coTpwBdCTrJR-2h0L8sUCXZk3bijsHismhL_OGQI-hng9pUfeM6OEpcO8WLtPV9YiJ-bsnfLzE9y-WmwyUmCWdBv1tAhZvDgeT3tbF87A',
-    sizes: ['100g', '250g', '500g'],
+    description: 'Premium turmeric with bright color and earthy aroma.',
+    price: 'Rs. 400',
+    image: '/masalas/1.Turmeric_Powder.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
   },
   {
-    name: 'Red Chilli Powder',
-    description: 'Sun-dried, vibrant heat.',
-    price: 'Rs. 129',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBOMdmZEtHRfNnDUAd1Hm1Nck3Vm5ZOyczc7QCD870eIoIHhnVgkZ0KXL-38vrvaHNaEEq_IIgG6cB9PIExA7apCHKtQsYSCYwDhuia5cpjcsJYgpvWXZQoRxx4lWeab8lBTlt1qyKse-m7Z3mhRWCpJWOatrhWsrbbUR3X7RERnjSLrXJ0TCJpTx58Q_4eO6lf2augN_w8Ju2ExnvtQhlpDB11mD0XHzIeVPY3aozGD64XXSeNBz7okZ-l_c52Aa9VvdjGRbePeiw',
-    sizes: ['100g', '250g', '500g'],
+    name: 'Coriander Powder',
+    description: 'Citrusy, warm coriander powder for daily cooking.',
+    price: 'Rs. 300',
+    image: '/masalas/10.Coriandor_Powder.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Cumin Powder',
+    description: 'Robust cumin aroma with warm, nutty flavor.',
+    price: 'Rs. 600',
+    image: '/masalas/11.Cumin_Powder.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Shahi Garam Masala',
+    description: 'Royal garam masala blend with layered whole-spice notes.',
+    price: 'Rs. 700',
+    image: '/masalas/2.Shahi_garam_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Sabji Masala',
+    description: 'Everyday vegetable masala for homestyle curries.',
+    price: 'Rs. 500',
+    image: '/masalas/2.Shahi_garam_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Chicken Masala',
+    description: 'Savory chicken masala blend with warming spices.',
+    price: 'Rs. 700',
+    image: '/masalas/7.Chiken_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Mutton Masala',
+    description: 'Rich and robust spice blend for mutton gravies.',
+    price: 'Rs. 800',
+    image: '/masalas/8.Mutton_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
   },
   {
     name: 'Shahi Biryani Masala',
-    description: 'Royal flavor for festive feasts.',
-    price: 'Rs. 249',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuBuz4M4ULMBNZMnpCmVlp0uvtr0CIb-628UPGIO22K3i_pe3yFZ8OmeBnQGYxKnJHr1TyCS079HQ3oawcrScd-plbPSbcXBwyiVu3GhW1LK-ohB0_YyaZR6ZPsL73-3vLSaYLsv5G0lmlZGpyhYtbTC5OSI-3jtJZz8nhxnkfL0zt2feNjygG0joDqfdj7w1U4Ma3dHiLILtMMdN7YPO2-hJiZwLjRSyGXt4GaDMOzm23OTBlz6FraqFcvY6mk9cY7WaQrAFs0NGpE',
-    sizes: ['100g', '250g'],
+    description: 'Fragrant biryani blend for celebratory rice dishes.',
+    price: 'Rs. 1,000',
+    image: '/masalas/5.Shahi_Biryani_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
   },
   {
     name: 'Chaat Masala',
-    description: 'Tangy, salty, and addictive.',
-    price: 'Rs. 139',
-    image:
-      'https://lh3.googleusercontent.com/aida-public/AB6AXuAh6zv7N6UDJJjKZTVcmJudvd5-atIJ0A7sV8csV6KFCV6MrcJF1CyAre6YMpRkSWv37zMrzP6E1VINF8TBRt1CWWuC06_5M8dcineZzveUi6RaMD_79ZGoDaT9wlo1eZpu6w-C-3r4A-YxbxfFhkmNy4IJd9OzBME_IeuqWd3STzT3BSTjsW09S2PARCAm3L-ver0o6Tg36oD5k8fpX3pK6GrvjhSWuX0AHAprcT3jRQ_1zNSd5KrRu_F0m_xhshdIu0ThA_kmINE',
-    sizes: ['100g', '250g', '500g'],
+    description: 'Tangy and savory finishing masala for snacks and fruits.',
+    price: 'Rs. 420',
+    image: '/masalas/15.Chaat_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Shahi Paneer Masala',
+    description: 'Creamy paneer curry masala with rich aromatic balance.',
+    price: 'Rs. 600',
+    image: '/masalas/shahi%20paneer%20masala.jpeg',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Fish Masala',
+    description: 'Coastal-style fish masala with bright and spicy notes.',
+    price: 'Rs. 540',
+    image: '/masalas/14.Malvani_Fish_Fry_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Goda Masala',
+    description: 'Classic Maharashtrian sweet-spiced goda masala.',
+    price: 'Rs. 700',
+    image: '/masalas/13.Goda_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Kala Masala',
+    description: 'Dark roasted masala with smoky Kolhapuri depth.',
+    price: 'Rs. 900',
+    image: '/masalas/12.Kala_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
+  },
+  {
+    name: 'Misal / Usal Masala',
+    description: 'Signature spicy blend for authentic misal and usal.',
+    price: 'Rs. 1,000',
+    image: '/masalas/9.Misal_Masala.png',
+    sizes: ['100 GM', '250 GM', '500 GM', '1 KG'],
   },
 ];
 
@@ -306,7 +368,6 @@ export const footerQuickLinks: ReadonlyArray<FooterLink> = [
   { label: 'Home', href: '/' },
   { label: 'Shop All', href: '/shop' },
   { label: 'Exports', href: '/exports' },
-  { label: 'Store Locator', href: '/store-locator' },
 ];
 
 export const footerHelpLinks: ReadonlyArray<FooterLink> = [
@@ -329,20 +390,22 @@ export const storeLocations: ReadonlyArray<StoreLocation> = [
     name: 'Veritraa Pantry at Kala Ghoda',
     address: '14 Ropewalk Lane, Kala Ghoda, Mumbai 400001',
     timings: 'Mon-Sat, 10:00 AM - 8:30 PM',
-    contact: '+91 98765 12001',
+    contact: '+91 8983002683',
   },
   {
     city: 'Pune',
     name: 'The Spice Atelier',
     address: '22 Prabhat Road, Deccan Gymkhana, Pune 411004',
     timings: 'Daily, 11:00 AM - 9:00 PM',
-    contact: '+91 98765 12002',
+    contact: '+91 8983002683',
   },
   {
     city: 'Bengaluru',
     name: 'Veritraa Experience Counter',
     address: '8 Lavelle Road, Ashok Nagar, Bengaluru 560001',
     timings: 'Mon-Sun, 11:00 AM - 8:00 PM',
-    contact: '+91 98765 12003',
+    contact: '+91 8983002683',
   },
 ];
+
+

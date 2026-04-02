@@ -1,92 +1,63 @@
 import Link from 'next/link';
-import { Globe, Share2 } from 'lucide-react';
-import {
-  footerHelpLinks,
-  footerLinktreeLinks,
-  footerQuickLinks,
-} from '@/src/data/mockData';
+import { Globe, Mail, Phone } from 'lucide-react';
 
 interface SiteFooterProps {}
 
 export default function SiteFooter(_: Readonly<SiteFooterProps>) {
   return (
-    <footer className="w-full border-t border-outline-variant/20 bg-surface-container-low px-6 py-16 md:px-8">
-      <div className="mx-auto grid max-w-screen-2xl grid-cols-1 gap-12 md:grid-cols-4">
-        <div>
-          <span className="mb-4 block font-headline text-2xl text-primary">Veritraa</span>
-          <p className="max-w-xs text-sm leading-relaxed text-on-surface opacity-70">
-            Dedicated to preserving the culinary wisdom of ancient India for the modern world.
-          </p>
-        </div>
+    <footer className="w-full border-t border-[#d4a900]/40 bg-[#5f0808] px-6 py-6 text-[#d9b43a] md:px-8 md:py-7">
+      <div className="mx-auto max-w-screen-xl">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-[1fr_auto] md:items-start">
+          <div className="text-center md:text-left">
+            <h2 className="font-headline text-xl uppercase tracking-[0.16em] md:text-2xl">
+              Veritraa Enterprises
+            </h2>
+            <div className="mx-auto mt-2 h-0.5 w-14 bg-[#d4a900] md:mx-0" />
+            <p className="mt-3 font-headline text-xl italic text-[#fff7de] md:text-2xl">
+              Pure. True. Trusted.
+            </p>
+          </div>
 
-        <div>
-          <h5 className="mb-6 font-label text-xs font-bold uppercase tracking-[0.18em] text-on-background">
-            Mission Statement
-          </h5>
-          <p className="max-w-xs text-sm leading-7 text-on-surface opacity-70">
-            Purity in every grain. Preserving the heritage of Indian spice crafts for a
-            global palate.
-          </p>
-        </div>
-
-        <div>
-          <h5 className="mb-6 font-label text-xs font-bold uppercase tracking-[0.18em] text-on-background">
-            Quick Links
-          </h5>
-          <ul className="flex flex-col gap-3">
-            {footerQuickLinks.map((link) => (
-              <li key={link.label}>
-                <Link
-                  className="inline-block text-sm leading-relaxed text-on-surface opacity-70 transition-transform hover:translate-x-1 hover:opacity-100"
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div>
-          <h5 className="mb-6 font-label text-xs font-bold uppercase tracking-[0.18em] text-on-background">
-            Contact
-          </h5>
-          <ul className="flex flex-col gap-3">
-            {footerHelpLinks.map((link) => (
-              <li key={link.label}>
-                <Link
-                  className="inline-block text-sm leading-relaxed text-on-surface opacity-70 transition-transform hover:translate-x-1 hover:opacity-100"
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <ul className="mt-3 flex flex-col gap-3">
-            {footerLinktreeLinks.map((link) => (
-              <li key={link.label}>
-                <Link
-                  className="inline-block text-sm leading-relaxed text-on-surface opacity-70 transition-transform hover:translate-x-1 hover:opacity-100"
-                  href={link.href}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <div className="mt-5 flex items-center gap-4 text-primary">
-            <Globe size={16} />
-            <Share2 size={16} />
+          <div className="flex flex-col gap-2 text-sm text-[#fff7de] md:min-w-[360px] md:text-base">
+            <div className="border border-[#d4a900] px-3 py-2 text-center">FSSAI License No. 21526086000916</div>
+            <div className="border border-[#d4a900] px-3 py-2 text-center">UDYAM UDYAM-MH-15-0288846</div>
+            <div className="border border-[#d4a900] px-3 py-2 text-center">Shop Act 2631200321013539</div>
           </div>
         </div>
-      </div>
 
-      <div className="mx-auto mt-16 flex max-w-screen-2xl flex-col items-center justify-between gap-4 border-t border-outline-variant/20 pt-8 text-sm text-on-surface opacity-70 md:flex-row">
-        <p>(c) 2024 Veritraa. Crafted for the Modern Apothecary.</p>
-        <div className="flex gap-6">
-          <Link href="#">Privacy</Link>
-          <Link href="#">Terms</Link>
+        <div className="mt-6 border-t border-[#d4a900]/30 pt-4 text-center">
+          <div className="mx-auto flex max-w-4xl flex-col items-center gap-2 text-sm text-[#fff7de] md:flex-row md:justify-center md:gap-6 md:text-lg">
+            <a className="inline-flex items-center justify-center gap-2 hover:text-white" href="https://veritraa.in">
+              <Globe size={15} />
+              Veritraa.in
+            </a>
+            <a
+              className="inline-flex items-center justify-center gap-2 hover:text-white"
+              href="mailto:veritraa.si@gmail.com"
+            >
+              <Mail size={15} />
+              veritraa.si@gmail.com
+            </a>
+            <a
+              className="inline-flex items-center justify-center gap-2 hover:text-white"
+              href="tel:+918983002683"
+            >
+              <Phone size={15} />
+              +91 8983002683
+            </a>
+          </div>
+
+          <div className="mt-4 text-xs text-[#d9b43a] md:text-sm">
+            <p className="font-semibold">© 2026 Veritraa Enterprises. All Rights Reserved.</p>
+            <p className="mt-1.5 font-semibold uppercase tracking-[0.14em] text-[#c9a12f]">
+              Women-Led | Clean Label | Farm to Pack
+            </p>
+          </div>
+
+          <div className="mt-2.5 flex justify-center gap-5 text-[11px] text-[#d9b43a] md:text-xs">
+            <Link href="#">Privacy</Link>
+            <Link href="#">Terms</Link>
+          </div>
         </div>
       </div>
     </footer>

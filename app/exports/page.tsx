@@ -240,7 +240,7 @@ export default function ExportsPage() {
               </label>
               <input
                 className="w-full rounded-lg border-none bg-surface-container-low p-4"
-                placeholder="alex@partnership.com"
+                placeholder="veritraa.si@gmail.com"
                 type="email"
               />
             </div>
@@ -250,7 +250,7 @@ export default function ExportsPage() {
               </label>
               <input
                 className="w-full rounded-lg border-none bg-surface-container-low p-4"
-                placeholder="+1 (555) 000-0000"
+                placeholder="+91 8983002683"
                 type="tel"
               />
             </div>
